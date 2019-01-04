@@ -11,7 +11,7 @@ class Post extends Model
 {
     use HasPersianString;
 
-    protected static $persianStrings = [
+    protected $persianStrings = [
         'title',
         'summary',
         'content',

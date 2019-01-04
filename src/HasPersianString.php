@@ -6,16 +6,17 @@ trait HasPersianString
 {
     public static function bootHasPersianString()
     {
-        static::saving(function ($model) {
-            if (empty(static::$persianStrings)) {
-                return;
-            }
+        $ps = app('PersianString');
 
-            $ps = app('PersianString');
-
-            foreach (static::$persianStrings as $persianString) {
+        static::saving(function ($model) use ($ps) {
+            foreach ($model->getPersianStrings() as $persianString) {
                 $model->{$persianString} = $ps->convert($model->{$persianString});
             }
         });
+    }
+
+    public function getPersianStrings()
+    {
+        return property_exists($this, 'persianStrings') ? $this->persianStrings : [];
     }
 }
