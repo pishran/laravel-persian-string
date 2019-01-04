@@ -29,7 +29,7 @@ class ServiceProvider extends BaseServiceProvider
         $this->app->singleton('PersianString', function () {
             $persianString = new PersianString(true);
 
-            $persianString->addrules(
+            $persianString->addRules(
                 config('persian-string.rules')
             );
 
