@@ -1,6 +1,6 @@
 {
     "name": "pishran/laravel-persian-string",
-    "description": "Convert Arabic/English/etc numbers and characters to Persian numbers and characters.",
+    "description": "Convert Arabic/English/etc numbers and characters to Persian numbers and characters in Laravel models.",
     "keywords": [
         "laravel",
         "persian",
