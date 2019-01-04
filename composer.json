@@ -1,0 +1,36 @@
+{
+    "name": "pishran/laravel-persian-string",
+    "description": "Convert Arabic/English/etc numbers and characters to Persian numbers and characters.",
+    "keywords": [
+        "laravel",
+        "persian",
+        "string"
+    ],
+    "homepage": "https://github.com/pishran/laravel-persian-string",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Farid Aghili",
+            "email": "farid@pishranit.ir",
+            "homepage": "https://www.faridaghili.ir",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "laravel/framework": "^5.6",
+        "pishran/persian-string": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pishran\\LaravelPersianString\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pishran\\LaravelPersianString\\ServiceProvider"
+            ]
+        }
+    }
+}
