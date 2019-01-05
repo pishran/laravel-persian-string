@@ -10,7 +10,9 @@ trait HasPersianString
 
         static::saving(function ($model) use ($ps) {
             foreach ($model->getPersianStrings() as $persianString) {
-                $model->{$persianString} = $ps->convert($model->{$persianString});
+                if (is_string($model->{$persianString})) {
+                    $model->{$persianString} = $ps->convert($model->{$persianString});
+                }
             }
         });
     }
